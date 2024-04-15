@@ -23,7 +23,7 @@ def main(username, password, database):
         port=3306
     )
     cur = conn.cursor()
-    cur.execute("SELECT id, name FROM states")
+    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
     rows = cur.fetchall()
     for id_, name in rows:
         print(f"({id_}, '{name}')")
