@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script that takes an URL and shows the Allowed OPTIONS
-curl -sI -X OPTIONS "$1" | grep "Allow:" | cut -d " " -f 2-
+# a Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
+curl -sH "X-School-User-Id: 98" "${1}"
